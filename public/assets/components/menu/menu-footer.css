@@ -1,0 +1,20 @@
+.menu-footer .menu-item__link {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.878rem;
+    padding: 0.8rem 0;
+}
+
+@media ( min-width: 768px ) {
+    .menu-footer {
+        margin: 0.8rem 0;
+        text-align: left;
+    }   
+}
+
+@media ( min-width: 1200px ) {
+    .menu-footer {
+        margin: initial;
+    }
+}

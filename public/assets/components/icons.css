@@ -1,0 +1,18 @@
+.icon {
+    display: block;
+    height: 2.2rem;
+    width: 2.2rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 2rem;
+}
+
+.icon-delete {
+    /* background-image: url( '../../svg/trash-icon.svg' ); */
+    background-image: url( '../../../public/assets/svg/trash-icon.svg' );
+}
+
+.icon-edit {
+    /* background-image: url( '../../../public/assets/svg/pencil-icon.svg' ); */
+    background-image: url( '../../../public/assets/svg/pencil-icon.svg' );
+}

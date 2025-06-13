@@ -1,0 +1,24 @@
+.page-product-details .btn-login {
+    display: none;
+}
+
+.page-product-details .product-item__icons.icons {
+    display: none;
+}
+
+.page-product-details .section.product-details .container-md {
+    padding: 0;
+}
+.page-product-details .sections {
+    padding: 0 0 6.4rem 0;
+}
+
+@media ( min-width: 768px ) {
+    .page-product-details .sections {
+        padding: 3.2rem 0 6.4rem 0;
+    }
+    .page-product-details .section.product-details .container-md {
+        padding-left: calc( var( --gutter-x ) * 0.5 );
+        padding-right: calc( var( --gutter-x ) * 0.5 );
+    }
+}

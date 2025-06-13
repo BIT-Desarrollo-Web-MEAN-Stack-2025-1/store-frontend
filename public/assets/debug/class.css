@@ -1,0 +1,30 @@
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    border: 1px dotted transparent;
+    box-sizing: border-box;
+}
+
+.search-icon__link {
+    border: 1px dotted transparent;
+    box-sizing: border-box;
+}
+
+.product-item > *:nth-last-child( -n + 3 ) {
+    border: 1px dotted transparent;
+    box-sizing: border-box;
+}
+
+.icon {
+    /* background-color: blue;
+    border: 1px dotted blue;
+    box-sizing: border-box; */
+}
+
+.nav-item:nth-last-child( -n + 3 ) {
+    /* background-color: orange; */
+}

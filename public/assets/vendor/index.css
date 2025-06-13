@@ -1,0 +1,1 @@
+/* generalmente los instalamos e importamos desde módulos npm, pero si descarga y usa archivos directamente, puede colocarlos en una capa separada llamada 'proveedor', por ejemplo: si hubieramos instalado 'normalize' como dependencia usando NPM o Yarn */

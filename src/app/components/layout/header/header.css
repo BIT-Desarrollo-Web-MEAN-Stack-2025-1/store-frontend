@@ -1,0 +1,17 @@
+.search {
+    display: none;
+}
+
+.navbar-menu {
+    width: 100%;
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

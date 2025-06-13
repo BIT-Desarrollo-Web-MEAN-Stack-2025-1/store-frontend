@@ -1,0 +1,84 @@
+.btn {
+    background-color: transparent;
+    border: 2px solid transparent;
+    display: inline-block;
+    padding: 1.2rem 1.6rem;
+}
+
+.btn-primary {
+    background-color: var( --BleuDeFrance );
+    border: 2px solid var( --BleuDeFrance );
+    color: var( --White );
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.2rem 1.6rem;
+}
+
+.btn-login {
+    padding: 1.2rem calc( 1.6rem * 3 );
+}
+.btn-admin {
+    padding: 1.2rem calc( 1.6rem * 1 );
+}
+
+.btn-search {
+    align-items: center;
+    background: var( --Cultured );
+    border-radius: 0 5rem 5rem 0;
+    border: 1px solid var( --Cultured );
+    display: flex;
+    height: var( --icon-height-search );
+    justify-content: center;
+    padding: 0.3rem;
+}
+
+.btn-outline-primary {
+    background-color: var( --White );
+    border: 2px solid var( --BleuDeFrance );
+    color: var( --BleuDeFrance );
+}
+
+.btn-primary:disabled,
+.btn-primary[disabled] {
+    opacity: .5;
+}
+
+.btn-view {
+    border: 2px solid transparent;
+    color: var( --BleuDeFrance );
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.9rem;
+    padding: 0;
+    display: initial;
+}
+
+.btn-all {
+    align-items: center;
+    border: 2px solid transparent;
+    color: var( --BleuDeFrance );
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 700;
+    gap: 1rem;
+    justify-content: space-between;
+    line-height: 1.9rem;
+    padding: 0;
+}
+
+.btn-all::after {
+    /* background-image: url( '../../svg/arrow-icon.svg' ); */
+    background-image:  url( '../../../public/assets/svg/arrow-icon.svg' );
+    
+    content: '';
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;  
+}
+
+@media ( min-width: 1200px ) {
+    .btn-primary {
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+}

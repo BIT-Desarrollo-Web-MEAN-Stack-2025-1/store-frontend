@@ -1,0 +1,44 @@
+.login__form,
+.product__form {
+    margin: 8rem auto;
+    max-width: 27.5rem;
+    width: 100%;
+}
+
+.product__form {
+    max-width: 90%;
+}
+
+.product__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    text-align: left;
+}
+
+.login__form .btn-primary,
+.product__form .btn-primary {
+    width: 100%;
+    height: var( --input-height );
+}
+
+@media ( min-width: 768px ) {
+    .login__title,
+    .product__title {
+        margin: 2rem 0;
+    }
+    .login__form,
+    .product__form {
+        max-width: 42.3rem;
+    }
+    .product__form {
+        max-width: 55.9rem;
+    }
+}
+
+@media ( min-width: 1200px ) {
+    .login__form,
+    .product__form {
+        margin: 12rem auto;
+    }
+}

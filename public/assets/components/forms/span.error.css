@@ -1,0 +1,32 @@
+/* Error: input */
+.form-message {
+    color: var( --FerrariRed );
+    display: none;
+    font-size: 1.2rem;
+    left: 0;
+    line-height: 1.644rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: var( --input-height );     /** Altura del campo */
+    width: 100%;
+}
+
+.form-message.invalid {
+    display: flex;
+}
+
+/* Error: textarea */
+.form-field-textarea .form-message {
+    display: none;
+    font-size: 1.2rem;
+    left: 0;
+    line-height: 1.644rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: var( --textarea-height );     /** Altura del campo */
+    width: 100%;
+}
+
+.form-field-textarea .form-message.invalid {
+    display: flex;
+}

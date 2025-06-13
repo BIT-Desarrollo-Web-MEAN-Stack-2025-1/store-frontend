@@ -1,0 +1,4 @@
+/* Configuraciones: se usa con preprocesadores y contiene fuentes, definiciones de colores, etc. */
+@import './base.css';
+@import './colors.css';
+@import './forms.css';

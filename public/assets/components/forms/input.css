@@ -1,0 +1,64 @@
+.form-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var( --input-height );
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid var( --ChineseSilver );
+    box-shadow: none;
+    color: var( --OuterSpace );
+    font-size: 1.6rem;
+    line-height: 2rem;
+    transition: 0.5s all;
+}
+
+.form-input:invalid {
+    border-bottom: 1px solid var( --ChineseSilver );
+}
+.form-input.invalid:invalid {
+    border-bottom: 3px solid var( --FerrariRed );
+    padding: 1rem 1rem 0 1rem;
+    transition: 0.5s all;
+}
+.form-input.invalid:invalid~label {
+    font-size: 1.2rem;
+    top: -20px;
+    color: var( --FerrariRed );
+    padding: 3.3rem 1rem;
+}
+
+.form-input:focus {
+    border-bottom: 3px solid var( --BleuDeFrance );
+    padding: 1rem 1rem 0 1rem;
+    transition: 0.5s all;
+}
+.form-input:focus~label {
+    font-size: 1.2rem;
+    top: -20px;
+    color: var( --BleuDeFrance );
+    padding: 3.3rem 1rem;
+}
+
+.form-input:valid {
+    border-bottom: 3px solid var( --ForestGreen );
+    padding: 1rem 1rem 0 1rem;
+    transition: 0.5s all;
+}   
+
+.form-input:valid~label {
+    font-size: 1.2rem;
+    top: -20px;
+    color: var( --ForestGreen );
+    padding: 3.3rem 1rem;
+}
+
+.form-input::placeholder {
+    opacity: 0;
+    transition: 0.5s all;
+}
+.form-input:focus::placeholder {
+    padding: 1rem 1rem 0 0;
+    opacity: 1;
+}

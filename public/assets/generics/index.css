@@ -1,0 +1,2 @@
+/* Genérico: restablecer y/o normalizar estilos, definición de tamaño de caja, etc. Esta es la primera capa que genera CSS real. */
+@import './normalize.css';

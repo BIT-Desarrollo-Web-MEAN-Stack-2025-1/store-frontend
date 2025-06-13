@@ -1,0 +1,23 @@
+.search {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.search__input {
+    height: var( --input-height-search );
+    background: var( --Cultured );
+    border: 1px solid var( --Cultured );
+    border-radius: 5rem 0 0 5rem;
+    outline: 0;
+    padding: 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .search {
+        width: 90%;
+    }
+    .search__input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,67 @@
+.form-field-textarea {
+    height: var( --textarea-height );
+}
+
+.form-textarea {
+    height: var( --textarea-height );
+    width: 100%;
+    padding: 1.8rem 1rem 0 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid var( --ChineseSilver );
+    box-shadow: none;
+    color: var( --OuterSpace );
+    font-size: 1.6rem;
+    line-height: 2rem;
+    transition: 0.5s all;
+}
+
+.form-textarea:invalid {
+    border-bottom: 1px solid var( --ChineseSilver );
+}
+.form-textarea.invalid:invalid {
+    border-bottom: 3px solid var( --FerrariRed );
+    transition: 0.5s all;
+}
+.form-textarea.invalid:invalid~label {
+    font-size: 1.2rem;
+    top: -20px;
+    color: var( --FerrariRed );
+    padding: 3.3rem 1rem;
+}
+
+
+.form-textarea:focus {
+    border-bottom: 3px solid var( --BleuDeFrance );
+    transition: 0.5s all;
+}
+
+.form-textarea:focus~label {
+    font-size: 1.2rem;
+    top: -20px;
+    color: var( --BleuDeFrance );
+    padding: 1rem 1rem 0 1rem;
+}
+
+.form-textarea:valid {
+    border-bottom: 3px solid var( --ForestGreen );
+    transition: 0.5s all;
+}  
+
+.form-textarea:valid~label {
+    font-size: 1.2rem;
+    top: -20px;
+    color: var( --ForestGreen );
+    padding: 1rem 1rem 0 1rem;
+}
+
+.form-textarea::placeholder {
+    opacity: 0;
+    transition: 0.5s all;
+}
+.form-textarea:focus::placeholder {
+    opacity: 1;
+}
