@@ -30,16 +30,23 @@
             <label for="product-category">Category</label>
             <select formControlName="category" id="product-category">
                 <option value="">Selected..</option>
-                <option value="home">Home</option>
-                <option value="technology">Tech</option>
-                <option value="tools">Tools</option>
+
+                <!-- for( const value of list ) {
+                    console.log( value );
+                } -->
+
+                @for ( objCategory of categories; track $index ) {
+                    <option [value]="objCategory._id">{{ objCategory.name }}</option>
+                }
+                
+      
             </select>
         </div>
         <div class="field">
             <label>State </label>
-            <input type="radio" formControlName="state" value="" placeholder="" id="product-state-available">
+            <input type="radio" formControlName="state" [value]="true" placeholder="" id="product-state-available">
             <label for="product-state-available">Available</label>
-            <input type="radio" formControlName="state" value="" placeholder="" id="product-state-notavailable">
+            <input type="radio" formControlName="state" [value]="false" placeholder="" id="product-state-notavailable">
             <label for="product-state-notavailable">Not Available</label>
         </div>
         <div class="field">
