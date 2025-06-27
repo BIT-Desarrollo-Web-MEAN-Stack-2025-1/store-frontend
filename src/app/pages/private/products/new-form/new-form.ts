@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CategoryService } from '../../../../services/category-service';
+import { Product } from '../../../../services/product';
 
 @Component({
   selector: 'app-new-form',
@@ -12,7 +13,10 @@ export class ProductNewForm {
   formData!: FormGroup;  
   categories: any = [];
 
-  constructor( private categoryService: CategoryService ) {
+  constructor( 
+    private categoryService: CategoryService,
+    private productService: Product 
+  ) {
     this.formData = new FormGroup({
       name: new FormControl( '', [ Validators.required, Validators.minLength( 5 ), Validators.maxLength( 50 ) ] ),
       description: new FormControl( '', [] ),
@@ -25,19 +29,28 @@ export class ProductNewForm {
   }
 
   onSubmit() {
-    console.log(
-      this.formData.valid,
-      this.formData.invalid,
-      this.formData.pristine,
-      this.formData.dirty,
-      this.formData.touched
-    );
+    // console.log(
+    //   this.formData.valid,
+    //   this.formData.invalid,
+    //   this.formData.pristine,
+    //   this.formData.dirty,
+    //   this.formData.touched
+    // );
 
     if( this.formData.valid ) {
       console.log( this.formData.value );
+      this.productService.registerProduct( this.formData.value ).subscribe({
+        next: ( data ) => {
+          console.log( data );
+        },
+        error: ( error ) => {
+          console.error( error );
+        },
+        complete: () => {
+          this.formData.reset();  // Limpiamos los campos del formulario
+        }
+      });
     }
-
-    this.formData.reset();  // Limpiamos los campos del formulario
   }
 
   ngOnInit() {
