@@ -1,1 +1,50 @@
-<p>products</p>
+<div class="page-product-list">
+  <h1>Product List</h1>
+
+  <!-- <pre>{{ products | json }}</pre> -->
+
+  <div class="product-list">
+      <table border="1">
+    <thead>
+      <th>
+        Image
+      </th>
+      <th>
+        Name Product
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Price
+      </th>
+      <th>
+        Stock
+      </th>
+      <th>
+        Actions
+      </th>
+    </thead>
+    <tbody>
+      @for ( product of products; track $index ) {
+        <tr>
+          <td>
+            <img class="product-image" [src]="product.urlImage" [alt]="product.name">
+          </td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price | currency }}</td>
+          <td>{{ product.stock }}</td>
+          <td>
+            <a class="btn btn-primary" href="#">Edit 1</a>
+            <a class="btn btn-primary" href="#">Edit 2</a>
+            <a class="btn btn-secondy" (click)="onDelete( product._id )">Delete</a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  </div>
+
+
+</div>

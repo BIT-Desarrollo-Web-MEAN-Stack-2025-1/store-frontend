@@ -1,0 +1,14 @@
+.product-image {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 7rem;
+    border: 2px solid lightgrey;
+    padding: 1rem;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}

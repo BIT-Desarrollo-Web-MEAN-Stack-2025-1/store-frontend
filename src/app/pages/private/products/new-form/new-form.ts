@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CategoryService } from '../../../../services/category-service';
 import { Product } from '../../../../services/product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-form',
@@ -10,12 +11,13 @@ import { Product } from '../../../../services/product';
   styleUrl: './new-form.css'
 })
 export class ProductNewForm {
-  formData!: FormGroup;  
+  formData!: FormGroup;
   categories: any = [];
 
-  constructor( 
+  constructor(
     private categoryService: CategoryService,
-    private productService: Product 
+    private productService: Product,
+    private router: Router
   ) {
     this.formData = new FormGroup({
       name: new FormControl( '', [ Validators.required, Validators.minLength( 5 ), Validators.maxLength( 50 ) ] ),
@@ -23,7 +25,7 @@ export class ProductNewForm {
       price: new FormControl( 0, [ Validators.required, Validators.min( 0 ) ] ),
       stock: new FormControl( 1, [ Validators.required, Validators.min( 1 ), Validators.max( 100 ) ] ),
       urlImage: new FormControl(),
-      category: new FormControl(),  // TODO: Traer los datos antes de establecer las reglas
+      category: new FormControl( '' ),  // TODO: Traer los datos antes de establecer las reglas
       state: new FormControl( true, [ Validators.required ] )
     });
   }
@@ -42,6 +44,7 @@ export class ProductNewForm {
       this.productService.registerProduct( this.formData.value ).subscribe({
         next: ( data ) => {
           console.log( data );
+          this.router.navigateByUrl( '/dashboard/products' );
         },
         error: ( error ) => {
           console.error( error );
