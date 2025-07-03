@@ -4,13 +4,16 @@ import { Login } from './pages/public/login/login';
 import { Register } from './pages/public/register/register';
 import { Products } from './pages/private/products/products';
 import { ProductNewForm } from './pages/private/products/new-form/new-form';
+import { Dashboard } from './pages/private/dashboard/dashboard';
+import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
     { path: 'home', component: Home },
     { path: 'login', component: Login },
     { path: 'register', component: Register },
-    { path: 'dashboard/products', component: Products },
-    { path: 'dashboard/products/new', component: ProductNewForm  },
+    { path: 'dashboard', component: Dashboard, canActivate: [ authGuard ]  },
+    { path: 'dashboard/products', component: Products, canActivate: [ authGuard ]  },
+    { path: 'dashboard/products/new', component: ProductNewForm, canActivate: [ authGuard ]   },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
     { path: '', redirectTo: 'home', pathMatch: "full" }
 ];
