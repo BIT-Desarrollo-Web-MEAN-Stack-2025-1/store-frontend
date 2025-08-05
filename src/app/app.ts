@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./components/layout/header/header";
 import { Footer } from "./components/layout/footer/footer";
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,8 @@ import { Footer } from "./components/layout/footer/footer";
 })
 export class App {
   protected title = 'fonefo-kids-frontend';
+
+  constructor() {
+    console.log( environment );
+  }
 }
